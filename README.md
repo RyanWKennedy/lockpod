@@ -4,5 +4,17 @@ https://github.com/linux4sam/at91bootstrap
 
 I feel that storing passwords on an isolated system such as this is more secure than storage on a PC or smartphone; because having a relatively small and single purpose code base, as well as no internet connection, reduces the area of potential attack vectors.
 
+## Quick Specs
+
 ## Screen-shots
 <img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_home.PNG">
+<br/>
+<img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_add.PNG">
+<br/>
+<img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_list.PNG">
+<br/>
+<img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_view.PNG">
+<br/>
+<img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_startup.PNG">
+<br/>
+<img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_locked.PNG">
