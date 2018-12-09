@@ -16,9 +16,9 @@ EPS_mainsafe program
 
 extern int main(void)
 {
-    WDT_Disable(WDT); // disable watchdog timer
+	WDT_Disable(WDT); // disable watchdog timer
 
-    printf("--------\n\r");
+	printf("--------\n\r");
 	printf("Begin application program debug console:\n\r");
 	printf("program compiled %s %s \n\r\n\r", __DATE__, __TIME__ );
 	
@@ -37,20 +37,20 @@ extern int main(void)
 	///////////////////////////////////////////////////////////////////////////
 	// Touch-panel prep (apparently needs to precede LCD prep)
 	
-    /* Configure TWI pins. */
+	/* Configure TWI pins. */
 	Pin TWIPins[] = {PINS_TWI0}; // TWI PIO pins to configure
-    PIO_Configure(TWIPins, PIO_LISTSIZE(TWIPins));
+	PIO_Configure(TWIPins, PIO_LISTSIZE(TWIPins));
 
-    /* Enable TWI peripheral clock */
-    PMC_EnablePeripheral(ID_TWI0);
+	/* Enable TWI peripheral clock */
+	PMC_EnablePeripheral(ID_TWI0);
 
-    /* Configure TWI */
-    TWI_ConfigureMaster(TWI0, TWIClock, BOARD_MCK);
-    TWID_Initialize(&twid, TWI0);
+	/* Configure TWI */
+	TWI_ConfigureMaster(TWI0, TWIClock, BOARD_MCK);
+	TWID_Initialize(&twid, TWI0);
 
-    /* Configure TWI interrupts */
-    IRQ_ConfigureIT(ID_TWI0, 0, TWI0_IrqHandler);
-    IRQ_EnableIT(ID_TWI0);
+	/* Configure TWI interrupts */
+	IRQ_ConfigureIT(ID_TWI0, 0, TWI0_IrqHandler);
+	IRQ_EnableIT(ID_TWI0);
 	
 	touchCtrl_setup();
 	touchCtrl_init();
@@ -59,7 +59,7 @@ extern int main(void)
 	// LCD prep
 	
 	LCDD_Initialize();
-    LCDD_SetBacklight(bBackLight);
+	LCDD_SetBacklight(bBackLight);
 	LCDD_CreateCanvas(LCDD_OVR1, pCanvasBuffer, 24, 0, 0, BOARD_LCD_WIDTH, BOARD_LCD_HEIGHT);
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////
