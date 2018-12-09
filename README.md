@@ -8,7 +8,7 @@ I feel that storing passwords on an isolated system such as this is more secure 
 
 ## Screen-shots
 <img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_home.PNG">
-<br/>
+
 <img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_add.PNG">
 <br/>
 <img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_list.PNG">
