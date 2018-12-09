@@ -3,3 +3,6 @@ This is the code to a portable electronic device I have designed for holding a l
 https://github.com/linux4sam/at91bootstrap
 
 I feel that storing passwords on an isolated system such as this is more secure than storage on a PC or smartphone; because having a relatively small and single purpose code base, as well as no internet connection, reduces the area of potential attack vectors.
+
+## Screen-shots
+<img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_home.PNG">
