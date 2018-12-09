@@ -7,6 +7,11 @@ I feel that storing passwords on an isolated system such as this is more secure 
 ## Quick Specs
 - Processor: 400MHz ARM core MPU/SoC with LCD controller
 - Memory: 128MB DDR2 SDRAM
+- Storage: 4MB SPI Flash
+- User I/O: 480x272 TFTLCD with parallel RGB comm / Capacitive touchscreen with I2C comm
+
+## Security
+A master key based on the user's chosen master password is derived using Scrypt, which is then used to encrypt all data with AES256.  Random number generator seeding is achieved by requesting that the user tap the screen in a random location upon startup, while in the background a counter is running at several kilohertz.  The seed is a function of the tap coordinates as well as the count number.  Small differences in the amount of time it takes the user to tap, can produce very different counts.  Random numbers are used for IVs/salts, as well as for laying out a random keyboard layout for the initial master password entry.  This prevents the screen wear from leaking information about the password.  See last two screen-shots for what this looks like.
 
 ## Screen-shots
 <img src="https://github.com/RyanWKennedy/lockpod/blob/master/img/IOSC_home.PNG">
